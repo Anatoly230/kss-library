@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+:root {
+    box-sizing: border-box;
+    font-size: 0.88em;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "ptsansB";
+    src: local("ptsansB"), url("../fonts/ptsansb.woff") format("woff"), url("../fonts/ptsansb.woff2") format("woff2");
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "ptsans";
+    src: local("ptsans"), url("../fonts/ptsans.woff") format("woff"), url("../fonts/ptsans.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    line-height: 1;
+}
+
+
+
+
+/*
+info block
+
+Обычный информационный блок
+
+Markup:
+<div class="info__text-content info-block">
+<p class="info-block__text heading-medium">
+СЕДОНА — небольшой городок в АРИЗОНЕ,
+заслуживающий большего !
+</p>
+<p class="info-block__text">
+Рассмотрим 5 причин,
+по которым Седона круче,
+чем гранд каньон !
+</p>
+</div>
+
+Styleguide Media
+*/
+.info-block {
+    background-color: #ffffff;
+    text-transform: uppercase;
+    padding-top: 1.57rem;
+    padding-bottom: 2.57rem;
+    background-color: red;
+}
+
+@media (min-width: 768px) {
+    .info-block {
+        padding-top: 2.57rem;
+        padding-bottom: 3.29rem;
+    }
+}
+
+.info-block__text {
+    width: 84.375%;
+    min-width: 270px;
+    text-align: center;
+    max-width: 520px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.info-block__btn {
+    border: none;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .info-block__btn {
+        max-width: 458px;
+    }
+}
+
+.info-block__btn-wrapper {
+    background-color: #eeeeee;
+}
+
+
